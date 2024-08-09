@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  color: black;
+  background-color: #e3dfdd; /* Couleur de fond uniforme */
+}
+
+@font-face {
+  font-family: 'Sasha-Marceline';
+  src: url('../../public/fonts/Sasha-Marceline.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Custom font class */
+.font-custom {
+  font-family: 'Sasha-Marceline', sans-serif;
+}
+ul,
+h2{
+  font-variant: small-caps;
+}
+.main-container {
+  margin: 0 4rem;
+}
+/* Animation for slow rotation */
+@keyframes slow-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-rotate {
+  animation: slow-rotate 10s linear infinite;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
